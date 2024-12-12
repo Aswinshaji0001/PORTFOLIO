@@ -1,38 +1,35 @@
 import React from 'react';
-
+import './css/Skills.css'
 function Skills() {
-  const skills = [
-    'HTML5',
-    'CSS',
-    'SCSS',
-    'Tailwind CSS',
-    'React.js',
-    'Node.js',
-    'MongoDB',
-    'Express.js',
-  ];
-
   return (
-    <section className="bg-white  py-10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">My Skills</h2>
-        <p className="text-gray-600 text-center mb-4">
-          I have a diverse set of skills that enable me to build modern web applications. 
-          Here are some of the technologies and frameworks I work with:
-        </p>
-
-        <div className="flex flex-wrap justify-center">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 m-2 shadow-md transition duration-300 hover:bg-gray-300"
-            >
-              {skill}
+    <section className="bg-black py-8">
+    <div class="container w-screen mx-auto p-4 pt-6 bg-black">
+        <h1 class="text-3xl font-bold mb-4 text-center text-white animate-fade-in">Skills</h1>
+        <div class="animate-slide-in flex flex-wrap justify-center my-5">
+            <div class="animate-fade-in bg-red-500 hover:bg-red-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">HTML5</h2>
             </div>
-          ))}
+            <div class="animate-fade-in bg-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">CSS</h2>
+            </div>
+            <div class="animate-fade-in bg-purple-500 hover:bg-purple-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">Tailwind CSS</h2>
+            </div>
+            <div class="animate-fade-in bg-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">ReactJS</h2>
+            </div>
+            <div class="animate-fade-in bg-green-500 hover:bg-green-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">NodeJS</h2>
+            </div>
+            <div class="animate-fade-in bg-yellow-500 hover:bg-yellow-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">MongoDB</h2>
+            </div>
+            <div class="animate-fade-in bg-orange-500 hover:bg-orange-700 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold text-white">Express JS</h2>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+  </section>
   );
 }
 
