@@ -28,7 +28,7 @@ function Contact() {
 
   const contactMethods = [
     { label: 'GitHub', href: 'https://github.com/Aswinshaji0001' },
-    { label: 'Email', href: 'mailto:aswinshaji0001@gmail.com' },
+    { label: 'Email', href: 'https://aswinshaji0001@gmail.com' },
     { label: 'Phone', href: 'tel:+9207298681', text: '9207298681' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aswin-shaji-ba39a32b8/' },
   ];
