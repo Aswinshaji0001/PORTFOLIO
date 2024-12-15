@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './css/Contact.css';
+import { FaGithub, FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa'; // Importing relevant icons
 
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,10 +28,10 @@ function Contact() {
   }, []);
 
   const contactMethods = [
-    { label: 'GitHub', href: 'https://github.com/Aswinshaji0001', githubLabel: 'Aswin Shaji' }, // GitHub heading with Aswin Shaji for card text
-    { label: 'Email', href: 'mailto:aswinshaji0001@gmail.com', isEmail: true, emailLabel: 'aswinshaji0001@gmail.com' }, // Email heading with email address as link
-    { label: 'Phone', href: 'tel:+9207298681', text: '9207298681' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aswin-shaji-ba39a32b8/', linkedInLabel: 'Aswin Shaji' }, // LinkedIn with label
+    { label: 'GitHub', href: 'https://github.com/Aswinshaji0001', icon: <FaGithub className="text-4xl" />, githubLabel: 'Aswin Shaji' },
+    { label: 'Email', href: 'mailto:aswinshaji0001@gmail.com', icon: <FaEnvelope className="text-4xl" />, isEmail: true, emailLabel: 'aswinshaji0001@gmail.com' },
+    { label: 'Phone', href: 'tel:+9207298681', icon: <FaPhoneAlt className="text-4xl" />, text: '9207298681' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aswin-shaji-ba39a32b8/', icon: <FaLinkedin className="text-4xl" />, linkedInLabel: 'Aswin Shaji' },
   ];
 
   return (
@@ -43,15 +44,19 @@ function Contact() {
           {contactMethods.map((contact, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-lg p-6 m-4 shadow-md transition duration-300 hover:bg-red-700 w-64 text-center transform transition-transform duration-500 ${isVisible ? `fade-slide-up delay-${index * 300}` : 'opacity-0 translate-y-10'}`}
+              className={`contact-card bg-gradient-to-r from-slate-900 to-slate-700 text-white rounded-lg p-6 m-4 shadow-md w-64 text-center transform transition-transform duration-500 ${isVisible ? `fade-slide-up delay-${index * 300}` : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${index * 300}ms` }} // Set delay using inline style
             >
-              <h3 className="text-lg font-semibold mb-2">{contact.label === 'GitHub' ? 'GitHub' : contact.label === 'Email' ? 'Email' : contact.label}</h3> {/* Display "Email" for Email card */}
+              <div className="mb-4">
+                {contact.icon} {/* Display the icon */}
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{contact.label}</h3>
               {contact.isEmail ? (
                 <a
                   href={contact.href}
                   className="text-white hover:underline"
                 >
-                  {contact.emailLabel} {/* Show email address for email card */}
+                  {contact.emailLabel}
                 </a>
               ) : (
                 contact.label !== 'Phone' && (
@@ -61,12 +66,12 @@ function Contact() {
                     rel="noopener noreferrer"
                     className="text-white hover:underline"
                   >
-                    {contact.label === 'LinkedIn' ? contact.linkedInLabel : contact.githubLabel} {/* Show "Aswin Shaji" for LinkedIn */}
+                    {contact.label === 'LinkedIn' ? contact.linkedInLabel : contact.githubLabel}
                   </a>
                 )
               )}
               {contact.label === 'Phone' && (
-                <p className="text-white">{contact.text}</p> // Only display text for phone
+                <p className="text-white">{contact.text}</p>
               )}
             </div>
           ))}
