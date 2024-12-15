@@ -6,19 +6,16 @@ function Projects() {
       title: 'Portfolio',
       description: 'A personal portfolio website built with React and Tailwind CSS. This project showcases my skills, projects, and experience. It features a responsive design and smooth animations, providing an engaging user experience.',
       link: 'https://example.com/project-one',
-      image: 'image.jpeg', // Replace with your project image URL
     },
     {
       title: 'Ecommerce Website',
       description: 'An ecommerce platform developed using React for the frontend and Node.js with Express for the backend. The application utilizes MongoDB for data storage, allowing users to browse products, add them to their cart, and complete purchases. Tailwind CSS is used for styling, ensuring a modern and responsive design.',
       link: 'https://example.com/project-two',
-      image: 'https://via.placeholder.com/300', // Replace with your project image URL
     },
     {
       title: 'College Management Website',
       description: 'A comprehensive college management system built with React and Tailwind CSS for the frontend, and Node.js with MongoDB for the backend. This project allows administrators to manage student records, courses, and faculty information efficiently. The user-friendly interface enhances the overall experience for both students and staff.',
       link: 'https://example.com/project-three',
-      image: 'https://via.placeholder.com/300', // Replace with your project image URL
     },
   ];
 
@@ -63,15 +60,14 @@ function Projects() {
                 visibleProjects.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               } transition-all duration-500 w-full sm:w-80 md:w-96 lg:w-96`} // Adjusted width on larger screens
             >
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover text-white" /> {/* Increased image height */}
-              <div className="p-4">
-                <h3 className="text-xl text-white font-semibold mb-2">{project.title}</h3>
-                <p className="text-white mb-4">{project.description}</p>
+              <div className="p-4 flex flex-col justify-between h-full"> {/* Flexbox for equal alignment */}
+                <h3 className="text-xl text-white font-semibold mb-2 text-center">{project.title}</h3>
+                <p className="text-white mb-4 text-center">{project.description}</p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-blue-500 hover:underline text-center"
                 >
                   View Project
                 </a>

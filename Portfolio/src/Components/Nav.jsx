@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             <li>
-              <a href="#contact" className="hover:text-yellow-400 transition-colors">About</a>
+              <a href="#aboutme" className="hover:text-yellow-400 transition-colors">About</a>
             </li>
             <li>
               <a href="#works" className="hover:text-yellow-400 transition-colors">Projects</a>

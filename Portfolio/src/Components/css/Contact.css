@@ -1,27 +1,30 @@
 @keyframes slideUp {
-    0% {
+  0% {
       opacity: 0;
       transform: translateY(20px); /* Starts below */
-    }
-    100% {
+  }
+  100% {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  .fade-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
-  }
-  
-  .delay-0 {
-    animation-delay: 0ms;
-  }
-  
-  .delay-300 {
-    animation-delay: 300ms;
-  }
-  
-  .delay-600 {
-    animation-delay: 600ms;
-  }
-  
+}
+
+.fade-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.delay-0 {
+  animation-delay: 0ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-600 {
+  animation-delay: 600ms;
+}
+.delay-900{
+  animation-delay: 900ms;
+
+}
