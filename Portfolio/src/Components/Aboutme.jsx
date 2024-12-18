@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaPhoneAlt, FaEnvelope, FaGithub } from 'react-icons/fa'; // Importing React Icons
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+import 'animate.css';
 function AboutMe() {
   return (
     <section className="bg-black py-10" id="aboutme">

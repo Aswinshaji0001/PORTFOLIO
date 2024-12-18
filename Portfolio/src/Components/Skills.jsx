@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/Skills.css'; // Ensure this file is imported
+import 'animate.css'; // Import animate.css
 import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaDatabase, FaAws } from 'react-icons/fa'; // Import FaAws from react-icons/fa
 import { DiCssdeck } from 'react-icons/di';
 import { SiTailwindcss, SiExpress, SiSqlite } from 'react-icons/si';
@@ -21,12 +22,14 @@ function Skills() {
   return (
     <section className="bg-black py-10">
       <div className="container mx-auto p-2 pt-4 bg-black">
-        <h1 className="text-3xl font-bold mb-4 text-center text-white animate-fade-in">Skills</h1>
-        <div className="animate-slide-in flex flex-wrap justify-center my-3">
+        <h1 className="text-3xl font-bold mb-4 text-center text-white animate__animated animate__fadeIn">Skills</h1>
+        <div className="flex flex-wrap justify-center my-3">
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className={`${skill.bgColor} hover:bg-opacity-80 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md w-full sm:w-1/2 md:w-1/3 animate-fade-in`}
+              className={`${
+                skill.bgColor
+              } hover:bg-opacity-80 transition duration-300 ease-in-out m-2 p-4 rounded-lg shadow-md w-full sm:w-1/2 md:w-1/3 animate__animated animate__fadeIn`}
               style={{
                 animationDelay: `${index * 0.2}s`, // Delay each skill's animation
               }}

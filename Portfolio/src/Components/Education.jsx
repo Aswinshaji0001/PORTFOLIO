@@ -1,5 +1,5 @@
-import './css/Education.css';
 import React, { useEffect, useState } from 'react';
+import 'animate.css'; // Ensure animate.css is imported
 import { FaGraduationCap, FaLaptopCode, FaBookOpen } from 'react-icons/fa'; // Importing relevant icons
 
 const Education = () => {
@@ -31,9 +31,11 @@ const Education = () => {
   return (
     <section id="education-section" className="bg-black py-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6 text-white">Education</h2>
-        
-        <div className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(0) ? 'translate-x-0' : '-translate-x-full'}`}>
+        <h2 className="text-4xl font-bold text-center mb-6 text-white">Education</h2>
+
+        <div
+          className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(0) ? 'animate__animated animate__fadeInLeft' : ''} hover:animate__animated hover:animate__zoomIn hover:animate__duration-300`}
+        >
           <div className="flex items-center mb-4">
             <FaLaptopCode className="text-4xl text-white mr-2" /> {/* Icon for internship */}
             <h3 className="text-xl font-semibold text-white">MERN FULL STACK INTERNSHIP</h3>
@@ -47,7 +49,9 @@ const Education = () => {
           </ul>
         </div>
 
-        <div className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(1) ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div
+          className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(1) ? 'animate__animated animate__fadeInLeft' : ''} hover:animate__animated hover:animate__zoomIn hover:animate__duration-300`}
+        >
           <div className="flex items-center mb-4">
             <FaGraduationCap className="text-4xl text-white mr-2" /> {/* Icon for degree */}
             <h3 className="text-xl font-semibold text-white">Bachelor of Computer Applications</h3>
@@ -57,7 +61,9 @@ const Education = () => {
           <p className="mt-2 text-white">Key subjects: Data Structures, Web Development, Software Engineering</p>
         </div>
 
-        <div className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(2) ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div
+          className={`education-card bg-red-700 shadow-md rounded-lg p-6 mb-6 transform transition-transform duration-700 bg-gradient-to-r from-slate-500 to-slate-800 ${visibleCards.includes(2) ? 'animate__animated animate__fadeInLeft' : ''} hover:animate__animated hover:animate__zoomIn hover:animate__duration-300`}
+        >
           <div className="flex items-center mb-4">
             <FaBookOpen className="text-4xl text-white mr-2" /> {/* Icon for high school */}
             <h3 className="text-xl font-semibold text-white">Plus Two (Science)</h3>
