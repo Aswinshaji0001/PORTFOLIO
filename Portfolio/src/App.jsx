@@ -8,6 +8,7 @@ import Skills from './Components/Skills'
 import Works from './Components/Works'
 import Contact from './Components/Contact'
 import Education from './Components/Education'
+import What from './Components/What'
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
           <Skills></Skills>
           <Education></Education>
           <Works></Works>
+          <What></What>
           <Contact></Contact>
     </>
   )

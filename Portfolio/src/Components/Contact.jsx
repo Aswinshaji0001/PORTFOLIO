@@ -30,7 +30,7 @@ function Contact() {
   const contactMethods = [
     { label: 'GitHub', href: 'https://github.com/Aswinshaji0001', icon: <FaGithub className="text-4xl" />, githubLabel: 'Aswin Shaji' },
     { label: 'Email', href: 'mailto:aswinshaji0001@gmail.com', icon: <FaEnvelope className="text-4xl" />, isEmail: true, emailLabel: 'aswinshaji0001@gmail.com' },
-    { label: 'Phone', href: 'tel:+9207298681', icon: <FaPhoneAlt className="text-4xl" />, text: '9207298681' },
+    { label: 'Phone', href: 'tel:+919207298681', icon: <FaPhoneAlt className="text-4xl" />, text: '+919207298681' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aswin-shaji-ba39a32b8/', icon: <FaLinkedin className="text-4xl" />, linkedInLabel: 'Aswin Shaji' },
   ];
 
