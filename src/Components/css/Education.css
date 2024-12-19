@@ -1,0 +1,10 @@
+.education-card {
+    transition: background-image 0.3s ease, transform 0.3s ease;
+    background-image: linear-gradient(to right, #2d3748, #1a202c); /* Default gradient */
+  }
+  
+  .education-card:hover {
+    background-image: linear-gradient(to right, #4a5568, #2d3748); /* Hovered gradient */
+    transform: scale(1.0); /* Optional: zoom effect */
+  }
+  

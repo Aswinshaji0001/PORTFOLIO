@@ -1,0 +1,54 @@
+/* Slide-Up Animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Starts below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade and Slide-up Animation */
+.fade-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Delay Classes */
+.delay-0 {
+  animation-delay: 0ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-600 {
+  animation-delay: 600ms;
+}
+
+.delay-900 {
+  animation-delay: 900ms;
+}
+
+/* Hover effect with zoom and gradient change */
+.contact-card {
+  transition: transform 0.3s ease, background-image 0.3s ease;
+  background-image: linear-gradient(to right, #2d3748, #1a202c); /* Default gradient */
+}
+
+/* Apply zoom and gradient change on hover */
+.contact-card:hover {
+  transform: scale(1.05); /* Small zoom effect */
+  background-image: linear-gradient(to right, #4a5568, #2d3748); /* Change to a lighter gradient */
+}
+
+/* Optional: Smooth transition for transform and background-color changes */
+.transition-transform {
+  transition: transform 0.5s ease-out;
+}
+
+.transition-opacity {
+  transition: opacity 0.5s ease-out;
+}

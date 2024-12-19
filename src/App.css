@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px auto;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin: 10px auto;
+      padding: 5px;
+    }
+  }
